@@ -29,7 +29,6 @@
 		    <artifactId>spring-jdbc</artifactId>
 		    <version>3.2.1.RELEASE</version>
 		</dependency>
-        
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
@@ -41,14 +40,14 @@
             <version>3.0.0.GA</version>
         </dependency>
         <dependency>
-            <groupId>unknown.binary</groupId>
-            <artifactId>hibernate-jpa-2.1-api-1.0.0.Final</artifactId>
-            <version>SNAPSHOT</version>
+                <groupId>org.hibernate.javax.persistence</groupId>
+                <artifactId>hibernate-jpa-2.0-api</artifactId>
+                <version>1.0.1.Final</version>
         </dependency>
         <dependency>
-            <groupId>unknown.binary</groupId>
-            <artifactId>postgresql-9.2-1002.jdbc4</artifactId>
-            <version>SNAPSHOT</version>
+                <groupId>postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>9.1-901.jdbc4</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
@@ -67,6 +66,17 @@
             <version>4.10</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.16</version>
+        </dependency>
+        <dependency>
+                <groupId>jaxen</groupId>
+                <artifactId>jaxen</artifactId>
+                <version>1.1</version>
+        </dependency>
+
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

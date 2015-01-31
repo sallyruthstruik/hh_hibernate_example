@@ -48,6 +48,10 @@ public class Transactions implements Serializable {
     @Basic(optional = false)
     @Column(name = "id")
     private Long id;
+
+    public void setId(Long id) {
+        this.id = id;
+    }
     @Basic(optional = false)
     @Column(name = "amount")
     private BigInteger amount;
@@ -56,13 +60,18 @@ public class Transactions implements Serializable {
     private Date created = new Date();
     @Column(name = "comment")
     private String comment;
+    
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     @ManyToOne
     private Users user;
 
     public Transactions() {
     }
-
+    
+    /*
+    Used only in Spring JDBC, because relationship not implemented
+    */
+    
     public Transactions(Long id) {
         this.id = id;
     }

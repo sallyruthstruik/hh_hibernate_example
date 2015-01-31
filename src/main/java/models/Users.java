@@ -46,6 +46,10 @@ public class Users implements Serializable {
     @Basic(optional = false)
     @Column(name = "id")
     private Long id;
+
+    public void setId(Long id) {
+        this.id = id;
+    }
     @Basic(optional = false)
     @Column(name = "first_name")
     private String firstName;
