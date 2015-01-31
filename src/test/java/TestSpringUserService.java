@@ -54,6 +54,8 @@ public class TestSpringUserService extends TestHibernateUserService{
     @Override
     public void setUp() {
         userService = new SpringUserService(dataSource);
+        
+        new JdbcTemplate(dataSource).update("DELETE FROM transactions; DELETE FROM users");
     }
     
     public static void main(String[] args) {

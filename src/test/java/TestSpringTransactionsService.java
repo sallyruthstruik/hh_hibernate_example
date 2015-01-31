@@ -4,6 +4,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.LogManager;
 import org.junit.BeforeClass;
 import org.postgresql.ds.PGSimpleDataSource;
+import org.springframework.jdbc.core.JdbcTemplate;
 import transactionService.SpringTransactionService;
 import userService.SpringUserService;
 import userService.UserService;
@@ -48,6 +49,8 @@ public class TestSpringTransactionsService extends TestHibernateTransactionsServ
     public void setUp() {
         trService = new SpringTransactionService(dataSource);
         userService = new SpringUserService(dataSource);
+        
+        new JdbcTemplate(dataSource).update("DELETE FROM transactions; DELETE FROM users;");
     }
     
     public static void main(String[] args) {
